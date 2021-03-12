@@ -235,7 +235,7 @@
 		<tr>
 			<td width=850px>
 				<center>
-					<img class="round" style="width:700px" src="./resources/ctmr_output.pdf"/>
+					<img class="round" style="width:700px" src="./resources/ctmr_output.png"/>
 				</center>
 			</td>
 		</tr>
@@ -266,9 +266,15 @@
 		<center>
 			<tr align=justify>
 				<td>
-					Our model first processes the input at very low-resolution x<sub>l</sub>, to produce a tensor of weights and
-					biases &phi;<sub>p</sub>. These are upsampled back to full-resolution, where they parameterize pixelwise, spatially-varying MLPs
-					f<sub>p</sub> that compute the final output y from the high-resolution input x. 
+					A single image from the source domain or the target domain fed 
+					into its corresponding domain-specific DR-UNet segmentation network, 
+					which has shared weights. The DR-UNet encoder extract high-level features for both the source 
+					and target domains. Then the features are sent to the decoder for segmentation and point-net to 
+					generate point-cloud. The point-cloud is fed to <b>D_3</b> for shape alignment. 
+					The output probability of DR-UNet for the source domain is trained in a supervised manner. 
+					Then, we send the \textit{softmax} output simultaneously to output-space alignment 
+					and entropy minimisation discriminators. The domain classifier networks, 
+					 <b>D_1</b> and  <b>D_2</b>, then differentiates whether its input is from source domain or target domain.
 			</tr>
 				</td>
 		</center>
