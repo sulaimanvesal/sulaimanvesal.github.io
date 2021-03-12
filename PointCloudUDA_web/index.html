@@ -120,8 +120,8 @@
 <head>
 	<title>ASAPNet</title>
 	<meta property="og:image" content=""/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Spatially-Adaptive Pixelwise Networks for Fast Image Translation" />
-	<meta property="og:description" content="T. Rott Shaham et al.,  ArXiv 2020." />
+	<meta property="og:title" content="Unsupervised Adaptation of Point-Clouds and Entropy Minimisation for Multi-modal Cardiac-MR Segmentation" />
+	<meta property="og:description" content="Sulaiman Vesal et al.,  ArXiv 2021." />
 
 	<!-- Get from Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics
@@ -138,33 +138,33 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Spatially-Adaptive Pixelwise Networks for Fast Image Translation</span>
+		<span style="font-size:36px">Unsupervised Adaptation of Point-Clouds and Entropy Minimisation for Multi-modal Cardiac-MR Segmentation</span>
 		<table align=center width=1100px>
 			<table align=center width=1100px>
 				<tr>
 					<td align=center width=110px>
 						<center>
-							<span style="font-size:24px"><a href="https://stamarot.webgr.technion.ac.il/">Tamar Rott Shaham</a></span>
+							<span style="font-size:24px"><a href="https://stamarot.webgr.technion.ac.il/">Sulaiman Vesal</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="http://www.mgharbi.com">Micha&euml;l Gharbi</a></span>
+							<span style="font-size:24px"><a href="http://www.mgharbi.com">Mingxuan Gu</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://richzhang.github.io/">Richard Zhang</a></span>
+							<span style="font-size:24px"><a href="https://rkosti.github.io/">Ronak Kosti</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://research.adobe.com/person/eli-shechtman/"> Eli Shechtman </a></span>
+							<span style="font-size:24px"><a href="https://lme.tf.fau.de/person/maier/"> Andreas Maier </a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://tomer.net.technion.ac.il/">Tomer Michaeli</a></span>
+							<span style="font-size:24px"><a href="https://eps.leeds.ac.uk/computing/staff/1846/dr-nishant-ravikumar/">Nishant Ravikumar</a></span>
 						</center>
 					</td>
 				</tr>
@@ -200,9 +200,8 @@
 		<table align=center width=850px>
 			<tr align=justify>
 				<td>
-					Our novel model, designed with A Spatially Adaptive Pixelwise Network (ASAPNet) enables generating high-resolution images 
-					at significantly lower runtimes than existing methods, while maintaining high visual quality. Particularly, as seen in the plot our 
-					model is 2-18x faster than baselines, depending on resolution.
+					Our novel model, designed with multi-task point-cloud and segmentation network enables bridging the gap between two differet imaging domains 
+					at significantly lower runtimes than existing methods, while maintaining high segmentation accuracy.
 				</td>
 			</tr>
 		</table>
@@ -214,16 +213,19 @@
 		<center><h1>Abstract</h1></center>
 		<tr align=justify>
 			<td>
-				We introduce a new generator architecture, aimed at fast and efficient high-resolution image-to-image translation. 
-				We design the generator to be an extremely lightweight function of the full-resolution image. In fact, we use <b>pixel-wise networks</b>; 
-				that is, each pixel is processed independently of others, through a composition of simple affine transformations and nonlinearities. 
-				We take three important steps to equip such a seemingly simple function with adequate expressivity. 
-				First, the parameters of the pixel-wise networks are <b>spatially varying</b>, so they can represent a broader function
-				class than simple 1x1 convolutions. Second, these parameters are <b>predicted</b> by a fast convolutional network that processes an
-				aggressively low-resolution representation of the input. Third, we augment the input image by concatenating a sinusoidal encoding of 
-				spatial coordinates, which provides an effective inductive bias for generating realistic novel high-frequency image content. 
-				As a result, our model is up to 18x faster than state-of-the-art baselines. We achieve this speedup while generating comparable
-				visual quality across different image resolutions and translation domains.
+		Deep learning models are sensitive to domain shift phenomena. A model trained on images from one domain cannot generalise well when tested on 
+				images from a different domain, despite capturing similar anatomical structures. It is mainly because the data distribution between 
+				the two domains is different. Moreover, creating annotation for every new modality is a tedious and time-consuming task, which 
+				also suffers from high inter- and intra- observer variability. Unsupervised domain adaptation (UDA) methods intend to reduce the 
+				gap between source and target domains by leveraging source domain labelled data to generate labels for the target domain. However, 
+				current state-of-the-art (SOTA) UDA methods demonstrate degraded performance when there is insufficient data in source and target domains. 
+				In this paper, we present a novel UDA method for multi-modal cardiac image segmentation. The proposed method is based on adversarial 
+				learning and adapts network features between source and target domain in different spaces. The paper introduces an end-to-end framework 
+				that integrates: a) entropy minimisation, b) output feature space alignment and c) a novel point-cloud shape adaptation based on latent 
+				features learned by the segmentation model. We validated our method on two cardiac datasets by adapting from the annotated source domain, 
+				bSSFP-MRI (balanced Steady-State Free Procession-MRI), to the unannotated target domain, LGE-MRI (Late-gadolinium enhance-MRI), for 
+				the multi-sequence dataset; and from MRI (source) to CT (target) for the cross-modality dataset. The results highlighted that by enforcing adversarial 
+				learning in different parts of the network, the proposed method delivered promising performance, compared to other SOTA methods.
 			</td>
 		</tr>
 	</table>
@@ -254,7 +256,7 @@
 		<tr>
 			<td width=850px>
 				<center>
-					<img class="round" style="width:700px" src="./resources/architecture_v8.png"/>
+					<img class="round" style="width:700px" src="./resources/git_framework.png"/>
 				</center>
 			</td>
 		</tr>
