@@ -1,0 +1,2325 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="SinGAN_files/filelist.xml">
+<link rel=Edit-Time-Data href="SinGAN_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>SinGAN</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>tamar rott</o:Author>
+  <o:LastAuthor>Tamar-Lea Rott-Shaham</o:LastAuthor>
+  <o:Revision>13</o:Revision>
+  <o:TotalTime>233</o:TotalTime>
+  <o:Created>2019-05-18T13:26:00Z</o:Created>
+  <o:LastSaved>2019-09-05T15:56:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>456</o:Words>
+  <o:Characters>2603</o:Characters>
+  <o:Lines>21</o:Lines>
+  <o:Paragraphs>6</o:Paragraphs>
+  <o:CharactersWithSpaces>3053</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem href="SinGAN_files/item0044.xml"
+target="SinGAN_files/props045.xml">
+<link rel=themeData href="SinGAN_files/themedata.thmx">
+<link rel=colorSchemeMapping href="SinGAN_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>HE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="377">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link Error"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1671 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+h2
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:14.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 4 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+h5
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 5 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:13.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 6 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 7 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 8 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 9 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Header Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	tab-stops:center 234.0pt right 468.0pt;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Footer Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	tab-stops:center 234.0pt right 468.0pt;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-noshow:yes;
+	mso-style-priority:35;
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	color:#2E74B5;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-noshow:yes;
+	mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Subtitle Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+em
+	{mso-style-priority:20;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-noshow:yes;
+	mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:36.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:36.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:36.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:36.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	direction:rtl;
+	unicode-bidi:embed;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoQuote, li.MsoQuote, div.MsoQuote
+	{mso-style-noshow:yes;
+	mso-style-priority:29;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Quote Char";
+	mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoIntenseQuote, li.MsoIntenseQuote, div.MsoIntenseQuote
+	{mso-style-noshow:yes;
+	mso-style-priority:30;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Intense Quote Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:36.0pt;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.MsoSubtleEmphasis
+	{mso-style-priority:19;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	color:#5A5A5A;
+	mso-themecolor:text1;
+	mso-themetint:165;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.MsoIntenseEmphasis
+	{mso-style-priority:21;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;
+	text-decoration:underline;
+	text-underline:single;}
+span.MsoSubtleReference
+	{mso-style-priority:31;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	text-decoration:underline;
+	text-underline:single;}
+span.MsoIntenseReference
+	{mso-style-priority:32;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-ansi-font-size:12.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+span.MsoBookTitle
+	{mso-style-priority:33;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-noshow:yes;
+	mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";
+	mso-font-kerning:16.0pt;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";
+	font-weight:bold;
+	font-style:italic;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-weight:bold;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 5";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 6";
+	font-weight:bold;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 7";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 8";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-style:italic;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 9";
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Subtitle;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Calibri Light";}
+span.QuoteChar
+	{mso-style-name:"Quote Char";
+	mso-style-priority:29;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Quote;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.IntenseQuoteChar
+	{mso-style-name:"Intense Quote Char";
+	mso-style-priority:30;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Intense Quote";
+	mso-ansi-font-size:12.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+span.ref
+	{mso-style-name:ref;
+	mso-style-unhide:no;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("SinGAN_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("SinGAN_files/header.htm") fcs;
+	mso-endnote-separator:url("SinGAN_files/header.htm") es;
+	mso-endnote-continuation-separator:url("SinGAN_files/header.htm") ecs;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 144.0pt 72.0pt 144.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1062"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+  <o:rules v:ext="edit">
+   <o:r id="V:Rule1" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_133"/>
+   <o:r id="V:Rule2" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_128"/>
+   <o:r id="V:Rule3" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_116"/>
+   <o:r id="V:Rule4" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_120"/>
+   <o:r id="V:Rule5" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_121"/>
+   <o:r id="V:Rule6" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_123"/>
+   <o:r id="V:Rule7" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_112"/>
+  </o:rules>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='tab-interval:36.0pt'>
+
+<div class=WordSection1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:10.1pt'>
+  <td width=851 valign=top style='width:637.9pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:10.1pt'>
+  <h2 style='margin:0cm;margin-bottom:.0001pt;text-align:left;tab-stops:1237.5pt;
+  direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+   id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+   path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="Picture_x0020_136" o:spid="_x0000_i1037" type="#_x0000_t75"
+   alt="Technion symbol" style='width:30.5pt;height:27.5pt;
+   visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="SinGAN_files/image001.jpg" o:title="Technion symbol"
+    cropleft="16221f"/>
+  </v:shape><![endif]--><![if !vml]><img width=41 height=37
+  src="SinGAN_files/image038.jpg" alt="Technion symbol"
+  v:shapes="Picture_x0020_136"><![endif]></span></h2>
+  </td>
+  <td width=217 valign=top style='width:163.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:10.1pt'>
+  <h2 align=right style='margin:0cm;margin-bottom:.0001pt;text-align:right;
+  mso-outline-level:2;tab-stops:1237.5pt;direction:ltr;unicode-bidi:embed'><span
+  style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_137"
+   o:spid="_x0000_i1036" type="#_x0000_t75" style='width:23pt;height:22pt;
+   visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="SinGAN_files/image003.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=31 height=29
+  src="SinGAN_files/image039.png" v:shapes="Picture_x0020_137"><![endif]></span><span
+  style='font-weight:normal'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.9pt'>
+  <td width=851 valign=top style='width:637.9pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:4.9pt'>
+  <h2 style='margin:0cm;margin-bottom:.0001pt;text-align:left;mso-outline-level:
+  2;tab-stops:1237.5pt;direction:ltr;unicode-bidi:embed'><span
+  style='font-weight:normal'>Technion - Israel Institute of Technology</span> <span style='mso-no-proof:yes'><o:p></o:p></span></h2>
+  </td>
+  <td width=217 valign=top style='width:163.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:4.9pt'>
+  <h2 align=right style='margin:0cm;margin-bottom:.0001pt;text-align:right;
+  mso-outline-level:2;tab-stops:1237.5pt;direction:ltr;unicode-bidi:embed'><span
+  style='font-weight:normal'>Google Research</span><span style='mso-no-proof:
+  yes'><o:p></o:p></span></h2>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+
+<p class=MsoNormal align=center style='margin-top:30pt;margin-right:20pt;
+margin-bottom:20pt;margin-left:30pt;margin-bottom:.0001pt;text-align:center;
+direction:ltr;unicode-bidi:embed'><span style='font-size:28.0pt;font-family:
+"Trebuchet MS",sans-serif;color:#70AD47'>SinGAN: Learning a Generative Model
+from a Single Natural Image<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:18.0pt;margin-right:30.45pt;
+margin-bottom:0cm;margin-left:30pt;margin-bottom:.0001pt;text-align:center;
+direction:ltr;unicode-bidi:embed'><span style='font-size:18.0pt;font-family:
+"Trebuchet MS",sans-serif;color:#6660FG'>ICCV 2019 Best paper award (Marr prize)<o:p></o:p></span></p>
+
+
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:27.3pt'>
+  <td width=463 colspan=2 valign=top style='width:347.3pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:27.3pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0cm;
+  margin-bottom:12.0pt;margin-left:0cm;text-align:center;direction:ltr;
+  unicode-bidi:embed'><span style='font-family:"Trebuchet MS",sans-serif'><a
+  href="https://stamarot.webgr.technion.ac.il/">Tamar Rott Shaham</a>,		<a
+  href="http://people.csail.mit.edu/talidekel/">Tali Dekel</a>,		<a
+  href="http://webee.technion.ac.il/people/tomermic/">Tomer Michaeli</a></span><span
+  style='font-size:28.0pt;font-family:"Trebuchet MS",sans-serif;color:#70AD47'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:27.3pt'>
+  <td width=232 valign=top style='width:173.65pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:27.3pt'>
+  <p class=MsoNormal align=right style='margin-left:108.0pt;text-align:right;
+  text-indent:-108.0pt;direction:ltr;unicode-bidi:embed'><span
+  style='font-family:"Trebuchet MS",sans-serif;color:#70AD47;mso-themecolor:
+  accent6;mso-themetint:153;mso-style-textfill-fill-color:#70AD47;mso-style-textfill-fill-themecolor:
+  accent6;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-colortransforms:
+  "lumm=60000 lumo=40000"'>[</span><span class=MsoHyperlink><a
+  href="https://arxiv.org/pdf/1905.01164.pdf"><span style='font-family:"Trebuchet MS",sans-serif;
+  color:#70AD47'>Paper</span></a></span><span style='font-family:"Trebuchet MS",sans-serif;
+  color:#70AD47;mso-themecolor:accent6;mso-themetint:153;mso-style-textfill-fill-color:
+  #70AD47;mso-style-textfill-fill-themecolor:accent6;mso-style-textfill-fill-alpha:
+  100.0%;mso-style-textfill-fill-colortransforms:"lumm=60000 lumo=40000"'>]</span><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+  </td>
+  <td width=232 valign=top style='width:173.65pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;text-align:left;direction:
+  ltr;unicode-bidi:embed'><span style='font-family:"Trebuchet MS",sans-serif;
+  color:#70AD47;mso-themecolor:accent6;mso-themetint:153;mso-style-textfill-fill-color:
+  #70AD47;mso-style-textfill-fill-themecolor:accent6;mso-style-textfill-fill-alpha:
+  100.0%;mso-style-textfill-fill-colortransforms:"lumm=60000 lumo=40000"'>[</span><span
+  class=MsoHyperlink><span style='color:#6666FF'><a
+  href="https://github.com/tamarott/SinGAN"><span style='font-family:"Trebuchet MS",sans-serif;
+  color:#70AD47'>Code</span></a></span></span><span style='font-family:"Trebuchet MS",sans-serif;
+  color:#70AD47;mso-themecolor:accent6;mso-themetint:153;mso-style-textfill-fill-color:
+  #70AD47;mso-style-textfill-fill-themecolor:accent6;mso-style-textfill-fill-alpha:
+  100.0%;mso-style-textfill-fill-colortransforms:"lumm=60000 lumo=40000"'>]</span><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:82.85pt;margin-bottom:
+0cm;margin-left:5.0cm;margin-bottom:.0001pt;text-align:left;direction:ltr;
+unicode-bidi:embed'><o:p>&nbsp;</o:p></p>
+
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.2pt'>
+  <td width=1052 rowspan=2 style='width:789.05pt;padding:.75pt .75pt .75pt .75pt;
+  height:12.2pt'>
+  <div align=center>
+  <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+   style='border-collapse:collapse;border:none;mso-yfti-tbllook:1184;
+   mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
+   none'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width=210 valign=top style='width:157.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-top:0cm;margin-right:-2.0pt;margin-bottom:
+    2.0pt;margin-left:0cm;text-align:left;line-height:115%;direction:ltr;
+    unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'><span
+    style='font-size:12.0pt;mso-spacerun:yes'>Single Training Image<o:p></o:p></span></b></p>
+    </td>
+    <td width=675 valign=top style='width:506.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal align=center style='margin-top:0cm;margin-right:-2.0pt;
+    margin-bottom:2.0pt;margin-left:0cm;text-align:center;line-height:115%;
+    direction:ltr;unicode-bidi:embed'><b><span style='font-size:12.0pt;font-family:"Trebuchet MS",sans-serif'>Random
+    samples from a <i>single </i>image<o:p></o:p></span></b></p>
+    </td>
+   </tr>
+   <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+    <td width=210 valign=top style='width:157.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+    115%;direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+     id="Picture_x0020_58" o:spid="_x0000_i1035" type="#_x0000_t75" style='width:153.5pt;
+     height:178.5pt;visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="SinGAN_files/image005.png" o:title="" croptop="7051f"
+      cropleft="146f" cropright="52663f"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=205 height=238
+    src="SinGAN_files/image040.jpg" v:shapes="Picture_x0020_58"><![endif]></span><span
+    style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+    </td>
+    <td width=675 valign=top style='width:506.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+    <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+    115%;direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+     id="Picture_x0020_59" o:spid="_x0000_i1034" type="#_x0000_t75" style='width:632.5pt;
+     height:178.5pt;visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="SinGAN_files/image005.png" o:title="" croptop="7051f"
+      cropleft="12757f" cropright="292f"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=843 height=238
+    src="SinGAN_files/image041.jpg" v:shapes="Picture_x0020_59"><![endif]></span><span
+    style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </div>
+  </td>
+  <![if !supportMisalignedRows]>
+  <td style='height:12.2pt;border:none' width=0 height=24></td>
+  <![endif]>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:12.2pt'>
+  <span style='font-size:10.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+  minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:
+  minor-fareast;mso-hansi-theme-font:minor-latin;mso-ansi-language:EN-US;
+  mso-fareast-language:EN-US;mso-bidi-language:HE'><![if !supportMisalignedRows]>
+  <td style='height:12.2pt;border:none' width=0 height=24></td>
+  <![endif]></span>
+ </tr>
+ </table>
+</div>
+
+<p class=MsoNormal align=center dir=RTL style='margin-top:0cm;margin-right:
+5.0cm;margin-bottom:0cm;margin-left:82.85pt;margin-bottom:.0001pt;text-align:
+center'><span dir=LTR style='font-family:"Times New Roman",serif;display:none;
+mso-hide:all'><o:p>&nbsp;</o:p></span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=7 cellpadding=0
+ style='mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+
+<td width=1070 colspan=7 valign=top style='width:802.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:150%;direction:ltr;unicode-bidi:embed'><b><span style='font-family:
+  "Trebuchet MS",sans-serif'>Image generation learned from a
+  single training Image.</span></b><span style='font-family:"Trebuchet MS",sans-serif'>
+  We propose SinGAN; a new unconditional generative model trained on a single
+  natural image. Our model learns the image's patch statistics across multiple
+  scales, using a dedicated multi-scale adversarial training scheme; it can
+  then be used to generate new realistic image samples that preserve the
+  original patch distribution while creating new object configurations and
+  structures.</span><span style='font-size:10.5pt;line-height:150%;font-family:
+  "Trebuchet MS",sans-serif;mso-bidi-language:AR-SA'><o:p></o:p></span></p>
+  </td>
+  <![if !supportMisalignedRows]>
+  <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+  <![endif]>
+ </tr>
+
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+</table>
+
+</div>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=1070
+ style='width:802.5pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=77 colspan=2 valign=top style='width:57.75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:-2.0pt;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-size:
+  14.0pt;line-height:115%;font-family:"Trebuchet MS",sans-serif;color:#70AD47'>Abstract</span><b><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></b></p>
+  </td>
+  <td width=993 colspan=5 valign=top style='width:744.75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h1 style='margin-right:-.25pt;text-align:justify;text-justify:inter-ideograph;
+  line-height:150%;tab-stops:1237.5pt;direction:ltr;unicode-bidi:embed'><span
+  style='font-size:12.0pt;line-height:150%;mso-bidi-font-family:"Times New Roman";
+  mso-bidi-theme-font:major-bidi;mso-bidi-language:AR-SA;font-weight:normal'><o:p>&nbsp;</o:p></span></h1>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=1070 colspan=7 valign=top style='width:802.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:150%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'>We introduce SinGAN, an unconditional generative
+  model that can be learned from a single natural image. Our model is trained
+  to capture the internal distribution of patches within the image, and is then
+  able to generate high quality, diverse samples that carry the same visual
+  content as the image. SinGAN contains a pyramid of fully convolutional GANs,
+  each responsible for learning the patch distribution at a different scale of
+  the image. This allows generating new samples of arbitrary size and aspect
+  ratio, that have significant variability, yet maintain both the global
+  structure and the fine textures of the training image. In contrast to
+  previous single image GAN schemes, our approach is not limited to texture
+  images, and is not conditional (i.e. it generates samples from noise). User
+  studies confirm that the generated samples are commonly confused to be real
+  images. We illustrate the utility of SinGAN in a wide range of image
+  manipulation tasks.<o:p></o:p></span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:150%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<div align=center>
+ 
+ <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=1070
+ style='width:802.5pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+ <tr>
+   <td width=77 colspan=2 valign=top style='width:57.75pt; padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:-2.0pt;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-size:
+  14.0pt;line-height:115%;font-family:"Trebuchet MS",sans-serif;color:#70AD47'>Talk</span><b><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></b></p>
+  </td>
+  </tr>
+<tr>  
+  <td  width=1070 colspan=7 valign=center align=center style='width:802.5pt;padding:10pt 5.4pt 20pt 5.4pt'>
+  <iframe align=center width="560" height="315" src="https://www.youtube.com/embed/j9id4UpN9BI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<div align=center>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=1070
+ style='width:802.5pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+ <tr style='mso-yfti-irow:2'>
+  <td width=170 colspan=7 valign=top style='width:802.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:-2.0pt;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-size:
+  14.0pt;line-height:115%;font-family:"Trebuchet MS",sans-serif;color:#70AD47'>SinGAN
+  for image manipulation</span><span style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=1070 colspan=7 valign=top style='width:802.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <div align=center>
+  <table class=MsoNormalTable border=0 cellspacing=3 cellpadding=0
+   style='mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.2pt'>
+    <td width=1151 rowspan=2 style='width:863.05pt;padding:.75pt .75pt .75pt .75pt;
+    height:12.2pt'>
+    <div align=center>
+    <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=1022
+     style='width:766.25pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
+     1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;
+     mso-border-insidev:none'>
+     <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:3.4pt'>
+      <td width=49 valign=top style='width:36.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:3.4pt'>
+      <p class=MsoNormal align=right style='margin-top:0cm;margin-right:-2.0pt;
+      margin-bottom:2.0pt;margin-left:0cm;text-align:right;line-height:115%;
+      direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></b></p>
+      </td>
+      <td width=226 valign=top style='width:169.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:3.4pt'>
+      <p class=MsoNormal align=center style='margin-top:0cm;margin-right:-2.0pt;
+      margin-bottom:2.0pt;margin-left:0cm;text-align:center;line-height:115%;
+      direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'>Paint
+      to image<o:p></o:p></span></b></p>
+      </td>
+      <td width=202 valign=top style='width:151.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:3.4pt'>
+      <p class=MsoNormal align=center style='margin-top:0cm;margin-right:-2.0pt;
+      margin-bottom:2.0pt;margin-left:1.15pt;text-align:center;line-height:
+      115%;direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'>Editing<o:p></o:p></span></b></p>
+      </td>
+      <td width=190 valign=top style='width:142.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:3.4pt'>
+      <p class=MsoNormal align=center style='margin-top:0cm;margin-right:-2.0pt;
+      margin-bottom:2.0pt;margin-left:0cm;text-align:center;line-height:115%;
+      direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'>Harmonization<o:p></o:p></span></b></p>
+      </td>
+      <td width=202 valign=top style='width:151.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:3.4pt'>
+      <p class=MsoNormal align=center style='margin-top:0cm;margin-right:-2.0pt;
+      margin-bottom:2.0pt;margin-left:0cm;text-align:center;line-height:115%;
+      direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'>Super-resolution<o:p></o:p></span></b></p>
+      </td>
+      <td width=152 valign=top style='width:114.15pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:3.4pt'>
+      <p class=MsoNormal align=center style='margin-top:0cm;margin-right:-2.0pt;
+      margin-bottom:2.0pt;margin-left:0cm;text-align:center;line-height:115%;
+      direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'>Animation<o:p></o:p></span></b></p>
+      </td>
+     </tr>
+     <tr style='mso-yfti-irow:1;page-break-inside:avoid;height:111.0pt'>
+      <td width=49 valign=top style='width:36.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal align=right style='margin-right:-2.0pt;text-align:
+      right;line-height:115%;direction:ltr;unicode-bidi:embed'><b><span
+      style='font-family:"Trebuchet MS",sans-serif'>Training Image</span></b><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+      <td width=226 rowspan=3 valign=top style='width:169.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+      115%;direction:ltr;unicode-bidi:embed'>
+        <v:stroke endarrow="block" joinstyle="miter"/>
+       </v:shape><w:wrap type="none"/>
+       <w:anchorlock/>
+      </v:group><![endif]--><![if !vml]><img width=211 height=438
+      src="SinGAN_files/image042.png" v:shapes="Group_x0020_77 Picture_x0020_109 Picture_x0020_110 Picture_x0020_111 Straight_x0020_Arrow_x0020_Connector_x0020_112"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+       id="_x0000_i1033" type="#_x0000_t75" style='width:158.35pt;height:328pt'>
+       <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+      </v:shape><span style='mso-element:field-end'></span><![endif]--><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+      <td width=202 rowspan=3 valign=top style='width:151.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+      115%;direction:ltr;unicode-bidi:embed'>
+        <v:stroke endarrow="block" opacity="64764f" joinstyle="miter"/>
+       </v:shape><w:wrap type="none"/>
+       <w:anchorlock/>
+      </v:group><![endif]--><![if !vml]><img width=189 height=438
+      src="SinGAN_files/image043.png" v:shapes="Group_x0020_78 Picture_x0020_114 Picture_x0020_115 Straight_x0020_Arrow_x0020_Connector_x0020_116 Picture_x0020_117 Rectangle_x0020_118 Rectangle_x0020_119 Straight_x0020_Arrow_x0020_Connector_x0020_120 Straight_x0020_Arrow_x0020_Connector_x0020_121 Rectangle_x0020_122 Straight_x0020_Arrow_x0020_Connector_x0020_123"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+       id="_x0000_i1032" type="#_x0000_t75" style='width:141.3pt;height:328.2pt'>
+       <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+      </v:shape><span style='mso-element:field-end'></span><![endif]--><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+      <td width=190 rowspan=3 valign=top style='width:142.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+      115%;direction:ltr;unicode-bidi:embed'>
+        <v:stroke endarrow="block" joinstyle="miter"/>
+       </v:shape><w:wrap type="none"/>
+       <w:anchorlock/>
+      </v:group><![endif]--><![if !vml]><img width=175 height=438
+      src="SinGAN_files/image044.png" v:shapes="Group_x0020_79 Picture_x0020_125 Picture_x0020_126 Picture_x0020_127 Straight_x0020_Arrow_x0020_Connector_x0020_128"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+       id="_x0000_i1031" type="#_x0000_t75" style='width:131.5pt;height:328.2pt'>
+       <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+      </v:shape><span style='mso-element:field-end'></span><![endif]--><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+      <td width=202 rowspan=3 valign=top style='width:151.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+      115%;direction:ltr;unicode-bidi:embed'>
+        <v:stroke opacity="39321f"/>
+       </v:rect><w:wrap type="none"/>
+       <w:anchorlock/>
+      </v:group><![endif]--><![if !vml]><img width=188 height=437
+      src="SinGAN_files/image045.png" v:shapes="Group_x0020_80 Picture_x0020_130 Picture_x0020_131 Picture_x0020_132 Straight_x0020_Arrow_x0020_Connector_x0020_133 Rectangle_x0020_135"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+       id="_x0000_i1030" type="#_x0000_t75" style='width:141.1pt;height:327.5pt'>
+       <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+      </v:shape><span style='mso-element:field-end'></span><![endif]--><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+      <td width=152 rowspan=3 valign=top style='width:114.15pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal style='margin-right:-2.0pt;text-align:left;line-height:
+      115%;direction:ltr;unicode-bidi:embed'>
+         <v:imagedata src="SinGAN_files/image028.png" o:title=""/>
+        </v:shape></v:group><w:wrap type="none"/>
+       <w:anchorlock/>
+      </v:group><![endif]--><![if !vml]><img width=138 height=440
+      src="SinGAN_files/image046.png" v:shapes="Group_x0020_81 Picture_x0020_137 Group_x0020_138 Picture_x0020_139 Picture_x0020_140 Picture_x0020_141 Picture_x0020_142 Picture_x0020_143 Picture_x0020_144"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+       id="_x0000_i1029" type="#_x0000_t75" style='width:103.75pt;height:329.75pt'>
+       <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+      </v:shape><span style='mso-element:field-end'></span><![endif]--><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+     </tr>
+     <tr style='mso-yfti-irow:2;page-break-inside:avoid;height:111.0pt'>
+      <td width=49 valign=top style='width:36.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal align=right style='margin-right:-2.0pt;text-align:
+      right;line-height:115%;direction:ltr;unicode-bidi:embed'><b><span
+      style='font-family:"Trebuchet MS",sans-serif'>Input</span></b><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+     </tr>
+     <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes;page-break-inside:avoid;
+      height:111.0pt'>
+      <td width=49 valign=top style='width:36.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+      height:111.0pt'>
+      <p class=MsoNormal align=right style='margin-right:-2.0pt;text-align:
+      right;line-height:115%;direction:ltr;unicode-bidi:embed'><b><span
+      style='font-family:"Trebuchet MS",sans-serif'>Output</span></b><span
+      style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+      </td>
+     </tr>
+    </table>
+    </div>
+    </td>
+    <![if !supportMisalignedRows]>
+    <td style='height:12.2pt;border:none' width=0 height=24></td>
+    <![endif]>
+   </tr>
+   <tr style='mso-yfti-irow:1;height:12.2pt'>
+    <span style='font-size:10.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+    minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:
+    minor-fareast;mso-hansi-theme-font:minor-latin;mso-ansi-language:EN-US;
+    mso-fareast-language:EN-US;'><![if !supportMisalignedRows]>
+    <td style='height:12.2pt;border:none' width=0 height=24></td>
+    <![endif]></span>
+   </tr>
+   <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+    <td width=1151 style='width:863.05pt;padding:.75pt .75pt .75pt .75pt'>
+    <p class=MsoNormal style='margin-top:3.0pt;margin-left:2cm;text-align:justify;text-justify:
+    inter-ideograph;line-height:150%;direction:ltr;unicode-bidi:embed'><span
+    style='font-family:"Trebuchet MS",sans-serif'>SinGAN can be used in various
+    image manipulation tasks, including: transforming a paint (clipart) into a
+    realistic photo, rearranging and editing objects in the image, harmonizing
+    a new object into an image, image super-resolution and creating an
+    animation from a single input. In all these cases, our model observes only
+    the training image (first row) and is trained in the same manner for all
+    applications, with no architectural changes or further tuning.</span><span
+    style='font-size:10.5pt;line-height:150%;font-family:"Trebuchet MS",sans-serif;
+    mso-bidi-language:AR-SA'><o:p></o:p></span></p>
+    </td>
+    <![if !supportMisalignedRows]>
+    <td style='border:none' width=0><p class='MsoNormal'>&nbsp;</td>
+    <![endif]>
+   </tr>
+  </table>
+  </div>
+  </td>
+ </tr>
+
+ 
+ 
+ 
+</div>
+
+<div align=center>
+ 
+ <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=1070
+ style='width:802.5pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+ <tr>
+   <td width=77 colspan=2 valign=top style='width:57.75pt; padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:-2.0pt;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-size:
+  14.0pt;line-height:115%;font-family:"Trebuchet MS",sans-serif;color:#70AD47'>Downloads</span><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></b></p>
+  </td>
+  <td width=1023 colspan=6 valign=top style='width:766.9pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:8.8pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:-2.0pt;margin-bottom:
+  12.0pt;margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><b><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:101.5pt;mso-row-margin-right:26.1pt'>
+  <td width=47 valign=top style='width:35.6pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:101.5pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-size:
+  14.0pt;line-height:115%;font-family:"Trebuchet MS",sans-serif;color:#70AD47'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=179 colspan=2 valign=top style='width:134.4pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:101.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+   id="Picture_x0020_1" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:95pt;
+   height:123pt;visibility:visible;mso-wrap-style:square' o:bordertopcolor="black"
+   o:borderleftcolor="black" o:borderbottomcolor="black" o:borderrightcolor="black">
+   <v:imagedata src="SinGAN_files/image030.png" o:title=""/>
+   <w:bordertop type="single" width="6"/>
+   <w:borderleft type="single" width="6"/>
+   <w:borderbottom type="single" width="6"/>
+   <w:borderright type="single" width="6"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=128 height=165
+  src="SinGAN_files/image047.jpg" v:shapes="Picture_x0020_1"><![endif]></span><b><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></b></p>
+  </td>
+  <td width=300 valign=top style='width:225.25pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:101.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+   id="Picture_x0020_153" o:spid="_x0000_i1027" type="#_x0000_t75" style='width:95.5pt;
+   height:123pt;visibility:visible;mso-wrap-style:square' o:bordertopcolor="black"
+   o:borderleftcolor="black" o:borderbottomcolor="black" o:borderrightcolor="black">
+   <v:imagedata src="SinGAN_files/image032.png" o:title="" cropbottom="786f"/>
+   <w:bordertop type="single" width="8"/>
+   <w:borderleft type="single" width="8"/>
+   <w:borderbottom type="single" width="8"/>
+   <w:borderright type="single" width="8"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=130 height=167
+  src="SinGAN_files/image048.jpg" v:shapes="Picture_x0020_153"><![endif]></span><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+  </td>
+  <td width=270 valign=top style='width:202.35pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:101.5pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span style='font-family:
+  "Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+   id="Picture_x0020_154" o:spid="_x0000_i1026" type="#_x0000_t75" alt="Image result for youtube symbol"
+   style='width:67pt;height:27.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="SinGAN_files/image034.png" o:title="youtube symbol"/>
+   </v:shape><![endif]--><![if !vml]><img border=0 width=100 height=50
+   src="SinGAN_files/image049.png" alt="youtube" v:shapes="Picture_x0020_154"><![endif]></span><span
+   style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></p>
+   </td>
+  <td width=238 valign=top style='width:178.8pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:101.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p>&nbsp;</o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+   id="Picture_x0020_158" o:spid="_x0000_i1025" type="#_x0000_t75" alt="github symbol"
+   style='width:57.5pt;height:57.5pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="SinGAN_files/image036.jpg" o:title="github"/>
+  </v:shape><![endif]--><![if !vml]><img border=0 width=100 height=100
+  src="SinGAN_files/image050.jpg" alt="github symbol" v:shapes="Picture_x0020_158"><![endif]></span><b><span
+  style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></b></p>
+  </td>
+  <td style='mso-cell-special:placeholder;border:none;padding:0cm 0cm 0cm 0cm'
+  width=35><p class='MsoNormal'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;mso-row-margin-right:26.1pt'>
+  <td width=47 valign=top style='width:35.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><dir=RTL
+  style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman",serif;
+  mso-ascii-font-family:"Trebuchet MS";mso-hansi-font-family:"Trebuchet MS";
+  color:#70AD47'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=179 colspan=2 valign=top style='width:134.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span dir=LTR></span><span
+  style='font-family:"Trebuchet MS",sans-serif'><span dir=LTR></span>[ <a
+  href="https://arxiv.org/pdf/1905.01164.pdf">Paper</a> ]</span><dir=RTL style='font-family:"Times New Roman",serif;mso-ascii-font-family:
+  Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;
+  mso-hansi-theme-font:minor-latin;mso-no-proof:yes'><o:p></o:p></span></p>
+  </td>
+  <td width=300 valign=top style='width:225.25pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span dir=LTR></span><span
+  style='font-family:"Trebuchet MS",sans-serif'><span dir=LTR></span>[ <a
+  href="https://tomer.net.technion.ac.il/files/2019/09/SingleImageGan_SM.pdf">Supplementary
+  Material</a> ]</span><dir=RTL style='font-family:"Times New Roman",serif;
+  mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+  Calibri;mso-hansi-theme-font:minor-latin;mso-no-proof:yes'><o:p></o:p></span></p>
+  </td>
+  <td width=270 valign=top style='width:250pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:center;text-center:inter-ideograph;
+  line-height:115%;direction:ltr;unicode-bidi:embed'><span dir=LTR></span><span
+  style='font-family:"Trebuchet MS",sans-serif'><span dir=LTR></span>[ <a
+  href="https://youtu.be/xk8bWLZk4DU">Single Image Animation Video</a> ]</span><dir=RTL style='font-family:"Times New Roman",serif;mso-ascii-font-family:
+  "Trebuchet MS";mso-hansi-font-family:"Trebuchet MS"'><o:p></o:p></span></p>
+  </td>
+  <td width=238 valign=top style='width:178.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:115%;
+  direction:ltr;unicode-bidi:embed'><span dir=LTR></span><span
+  style='font-family:"Trebuchet MS",sans-serif'><span dir=LTR></span>[ <a
+  href="https://github.com/tamarott/SinGAN">Github</a> ]</span><dir=RTL style='font-family:"Times New Roman",serif;mso-ascii-font-family:
+  "Trebuchet MS";mso-hansi-font-family:"Trebuchet MS"'><o:p></o:p></span></p>
+  </td>
+  <td style='mso-cell-special:placeholder;border:none;padding:0cm 0cm 0cm 0cm'
+  width=35><p class='MsoNormal'>&nbsp;</td>
+ </tr>
+ </table>
+ 
+ 
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 width=1070
+ style='width:802.5pt;border-collapse:collapse;border:none;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:
+ none'>
+ <tr style='mso-yfti-irow:4;height:8.8pt'>
+  <td width=47 valign=top style='width:35.6pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:8.8pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:-2.0pt;margin-bottom:
+  0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;text-justify:
+  inter-ideograph;line-height:115%;direction:ltr;unicode-bidi:embed'><span
+  style='font-size:14.0pt;line-height:115%;font-family:"Trebuchet MS",sans-serif;
+  color:#70AD47'>BibTex</span><b><span style='font-family:"Trebuchet MS",sans-serif'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+<tr style='mso-yfti-irow:4;height:8.8pt'>
+<td width=270 valign=top style='width:250pt;padding:10pt 5.4pt 10pt 5.4pt'>
+<pre><code>@inproceedings{rottshaham2019singan,
+  title={SinGAN: Learning a Generative Model from a Single Natural Image},
+  author={Rott Shaham, Tamar and Dekel, Tali and Michaeli, Tomer},
+  booktitle={Computer Vision (ICCV), IEEE International Conference on},
+  year={2019}
+}
+</code></pre>
+</td>
+</tr>
+</table>
+
+
+
+
+</table>  
+
+</div>
+
+</body>
+
+</html>
