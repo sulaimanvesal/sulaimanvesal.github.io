@@ -1,332 +1,442 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulaiman Vesal | Applied Science Manager</title>
+    <meta name="description" content="Research Portfolio of Sulaiman Vesal - Microsoft Research">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JLBSZZEVM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  gtag('config', 'G-T9MWK0XS05');
-</script>
-	
-<title>Sulaiman Vesal</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    },
+                    colors: {
+                        deep: '#030712',
+                        neon: '#00f3ff',
+                        ms_brand: '#00a4ef',
+                        glass: 'rgba(255, 255, 255, 0.03)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
 
-<meta name="author" content="Sulaiman Vesal">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<link rel="icon" type="image/png" href="images/icon2.png">
+    <style>
+        body { background-color: #030712; color: #e2e8f0; overflow-x: hidden; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f3ff; }
 
+        /* Glassmorphism Utils */
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-glass {
+            background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Typography & Glows */
+        .text-glow { text-shadow: 0 0 20px rgba(0, 243, 255, 0.3); }
+        .border-glow:hover { box-shadow: 0 0 20px rgba(0, 164, 239, 0.2); border-color: rgba(0, 164, 239, 0.5); }
+
+        /* Canvas Background */
+        #neural-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed; inset: 0; background: #030712; z-index: 100;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .loader-line {
+            width: 0%; height: 2px; background: #00f3ff;
+            box-shadow: 0 0 10px #00f3ff;
+        }
+    </style>
 </head>
+<body class="antialiased selection:bg-cyan-500 selection:text-black">
 
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:left;">
-                <name>Sulaiman Vesal</name>
-              </p>
-              <p style="text-align:left; margin-top:30px">
-			  Currently, I am an AI researcher at <a href="https://hanwhavisionamerica.com/">Hanwha Vision America</a> working on computer vision problems including object detection, action recognition and multi-modal imaging. Previously, I worked as a R&D Scientist and Engineer at <a href="https://med.stanford.edu/ucil.html">Urologic Cancer Innovation Lab (UCIL)</a> in Stanford. I am also a PhD candidate, supervised by <a href="https://lme.tf.fau.de/person/maier/">Prof. Dr.-Ing. habil. Andreas Maier</a> at the <a href="https://lme.tf.fau.de/">Pattern Recognition Lab</a>, in <a href="https://www.fau.de/">FAU Erlangen-Nuremberg</a>. 
-			  </p>
-			  <p style="text-align:left">
-			  I have done my M.Sc. in computer science at department of computer science in <a href="http://www.sau.int/"> South Asian University</a> in 2013, Delhi, India. Before that, I have received my B.Sc. degree in computer science also from <a href="http://csf.edu.af/"> Kabul University</a> in 2010.
-			  </p>
-              <p>
-		<b>Email:</b> sulaiman.vesal@fau.de
-              </p>
+    <div id="loader">
+        <div class="text-center">
+            <div class="font-mono text-xs text-cyan-500 mb-2">INITIALIZING MAIDAP PROTOCOLS...</div>
+            <div class="w-64 h-[1px] bg-gray-800 rounded-full overflow-hidden">
+                <div class="loader-line h-full"></div>
+            </div>
+        </div>
+    </div>
 
-              <p style="text-align:center; margin-top:30px; margin-bottom:0px">
-                <a href="mailto:sulaiman.vesal@fau.de">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.co.in/citations?user=SQOL8eYAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/sulaiman_svesal">Twitter</a> &nbsp/&nbsp
-                <a href="https://github.com/sulaimanvesal">Github</a> &nbsp/&nbsp
-		<a href="https://researchgate.org/sulaimanvesal">ResearchGate</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:27%;max-width:40%">
-			  <img style="border-radius: 50%;width:100%;max-width:100%" alt="profile photo" src="images/profile.jpeg" class="hoverZoomLink" ></a>
-            </td>
-          </tr>
-        </tbody></table>
-	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
-              <p>
-                My research interests lie in medical image processing, computer vision, deep learning and machine learning. I had a great time developing deep learning models for cardiovascular MR segmentation/quantification, usnupervised domain adaptation for corss-modality imaging and multi-modal breast cancer diagonsis.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-		
-		<hr>
-		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding-left:20px;padding-bottom:10px;width:100%;vertical-align:middle">
-              <heading>News</heading>
-			  </td>
-			 </tr>
-			</tbody></table>
-			<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>		
-			 <tr>
-             <td style="padding:20px;width:1000%;vertical-align:top">
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Jul 2024] </em> 3rd place at <a href="https://dcase.community/challenge2024/task-language-queried-audio-source-separation-results"> DCASE competition</a>.</b>
- 			  </p>
-			  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Jun 2024] </em> PICAI 2023 paper accepted in LANCET Oncology journal  (<b>Impact Factor: 50.8).</b>
- 			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Nov 2023] </em> Started my new job as an AI Researcher at <a href="https://hanwhavisionamerica.com/">Hanwha Vision America</a>.</b>
- 			  </p>
-			  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Dec 2023] </em> Our  <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SQOL8eYAAAAJ&sortby=pubdate&citation_for_view=SQOL8eYAAAAJ:-f6ydRqryjwC">ProsDectNet: Bridging the gap for prostate cancer detection on Transrectal Ultrasound </a> paper was accepted to Medical Imaging workshop at NeurIPS 2023.</b>
- 			  </p>
-			  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Feb 2022] </em> Our  <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SQOL8eYAAAAJ&sortby=pubdate&citation_for_view=SQOL8eYAAAAJ:mVmsd5A6BfQC">Domain Generalized Prostate Gland Segmentation on Transrectal Ultrasound Images </a> paper was accepted to Medical Image Analysis (MedIA). (<b>Impact Factor: 10.8)</b>
- 			  </p>
-			  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Mar 2021] </em> Our  <a href="https://sulaimanvesal.github.io/PointCloudUDA_web/">Adapt Everywhere UDA </a> paper was accepted to IEEE Transaction in Medical Imaging (IEEE-TMI). (<b>Impact Factor: 10.8)</b>
- 			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Jan 2021] </em> Our  <a href="https://sulaimanvesal.github.io/LVQuan_SpatioTemporal/">Spatio-Temporal Multi-task Learning for Full LV Quantification</a>  was accepted to IEEE Journal of Biomedical Health and Informatic (IEEE-TMI). (<b>Impact Factor: 7.7)</b>
- 			  </p>
-			  <p style="text-align:left; margin-top: -10px;">
-			  <em> [Feb 2021] </em> Started my new job as a R&D sceintist and Engineer at <a href="https://med.stanford.edu/ucil.html">Urologic Cancer Innovation Lab (UCIL)</a> in Stanford.
- 			  </p>
-			  <p style="text-align:left; margin-top: -10px;">
-			  <em> [Aug 2020] </em> Started my job as a research data scientist at <a href="https://med.stanford.edu/ucil.html">ArnaoutLab</a> at University of California San Francisco (UCSF).
-			  <p style="text-align:left; margin-top: -10px;">
-			  <em> [July 2020] </em> I have finished my PhD (Defense is pending -_-) at at the <a href="https://lme.tf.fau.de/">Pattern Recognition Lab</a>, in <a href="https://www.fau.de/">FAU Erlangen-Nuremberg</a>, Germany.
-			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  <em> [Apr 2020] </em> Our journal paper titled <a href="https://www.mdpi.com/2313-433X/6/7/65">Fully Automated 3D Cardiac MRI Localisation and Segmentation Using Deep Neural Networks</a> was accepted to MDPI Jounral of Imaging. (<b>Impact Factor: 2.0)</b>
- 			  </p>
-			  <p style="text-align:left; margin-top: -10px;">
-			  <em> [Oct 2019] </em> We gave a talk about our supervised UDA method for mulit-sequence myocaridal segmentation in <a href="https://stacom2019.cardiacatlas.org/program/">MICCAI-STCOM 2019</a>.
-			  </p>
-		     	  <p style="text-align:left; margin-top: -10px;">
-			  <em> [Oct 2019] </em> We won the second place for Multi-sqeuence Cardiac-MRI segmentation challenge at <a href="https://stacom2019.cardiacatlas.org/program/">MICCAI-STCOM 2019</a>.
-			  </p>
-		     	  <p style="text-align:left; margin-top: -10px;">
-			  <em> [Oct 2018] </em> We won the second place for <a href="https://atriaseg2018.cardiacatlas.org/">Atrial Segmentation Challenge</a> at <a href="https://stacom2018.cardiacatlas.org/program/">MICCAI-STCOM 2018</a>.
-			  </p>
+    <canvas id="neural-canvas"></canvas>
 
-            </td>
-          </tr>
-        </tbody></table>
-		
-		<hr>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding-top:20px;padding-left:20px;width:100%;vertical-align:middle">
-              <heading>Publications</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr onmouseout="asap_stop()" onmouseover="asap_start()">
-            <td style="padding-left:20px;padding-top:20px;padding-bottom:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='asap_image'>
-                  <img src='images/git_framework.png' width="160"></div>
-                <img src='images/git_framework.png' width="160">
-              </div>
-              <script type="text/javascript">
-                function asap_start() {
-                  document.getElementById('asap_image').style.opacity = "1";
-                }
+    <nav class="fixed w-full z-50 nav-glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-mono font-bold tracking-tighter text-white group">
+                SV<span class="text-cyan-400">.ai</span>
+                <span class="block h-0.5 w-0 group-hover:w-full bg-cyan-400 transition-all duration-300"></span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-white transition-colors">Profile</a>
+                <a href="#stack" class="hover:text-white transition-colors">Intelligence</a>
+                <a href="#research" class="hover:text-white transition-colors">Publications</a>
+                <a href="#experience" class="hover:text-white transition-colors">Timeline</a>
+            </div>
+            <a href="https://scholar.google.com/citations?user=SQOL8eYAAAAJ&hl=en" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-black transition-all duration-200 bg-white rounded-full hover:bg-cyan-400 hover:text-black ring-2 ring-white hover:ring-cyan-400 hover:shadow-[0_0_20px_rgba(0,243,255,0.5)]">
+                Access Scholar
+            </a>
+        </div>
+    </nav>
 
-                function asap_stop() {
-                  document.getElementById('asap_image').style.opacity = "0";
-                }
-                asap_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://sulaimanvesal.github.io/PointCloudUDA_web/">
-                <papertitle>Unsupervised Adaptation of Point-Clouds and Entropy Minimisation for Multi-modal Cardiac-MR Segmentation</papertitle>
-              </a>
-              <br>
-              <strong>Sulaiman Vesal</strong>, 
-	      <a href="http://www.mgharbi.com/">Mingxuan Gu</a>, 
-              <a href="https://rkosti.github.io/">Ronak Kosti</a>, 
-              <a href="https://lme.tf.fau.de/person/maier/">Andreas Maier</a>,
-              <a href="https://eps.leeds.ac.uk/computing/staff/1846/dr-nishant-ravikumar/">Nishant Ravikumar</a>
-              <br>
-              <em>IEEE Transaction in Medical Imaging</em>, 2021
-              <br>
-              <a href="https://sulaimanvesal.github.io/PointCloudUDA_web/">project page</a> /
-              <a href="https://arxiv.org/pdf/2103.08219.pdf">arXiv</a> /
-              <a href="https://arxiv.org/pdf/2103.08219.pdf">IEEE-TMI</a> /
-	      <a href="https://github.com/sulaimanvesal/PointCloudUDA">Code</a> 
-            </td>
-          </tr>
-		  
-		  <tr onmouseout="singan_stop()" onmouseover="singan_start()">
-            <td style="padding-left:20px;padding-top:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='singan_image'>
-                  <img src='images/LVQuan.jpeg' width="160"></div>
-                <img src='images/LVQuan.jpeg' width="160">
-              </div>
-              <script type="text/javascript">
-                function singan_start() {
-                  document.getElementById('singan_image').style.opacity = "1";
-                }
+    <main class="relative pt-32 pb-20 lg:pt-48">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="hero-content opacity-0 translate-y-10">
+                    <div class="inline-flex items-center space-x-2 bg-slate-800/50 rounded-full px-3 py-1 mb-6 border border-cyan-500/30">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-xs font-mono text-cyan-300">ONLINE // REDMOND, WA</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+                        Engineering <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 text-glow">Intelligence.</span>
+                    </h1>
+                    <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
+                        I am <strong class="text-white">Sulaiman Vesal</strong>, Senior Applied Science Manager at <span class="text-cyan-400">Microsoft Research</span>.
+                        <br><br>
+                        Architecting large-scale AI systems at the intersection of generative models and healthcare. Currently driving innovation in MAIDAP.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-white text-black font-bold rounded hover:bg-cyan-400 transition-all hover:scale-105 duration-300">
+                            Connect on LinkedIn
+                        </a>
+                        <a href="https://github.com/sulaimanvesal" class="px-8 py-4 glass-panel text-white font-bold rounded hover:bg-white/10 transition-all border-glow flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
 
-                function singan_stop() {
-                  document.getElementById('singan_image').style.opacity = "0";
-                }
-                singan_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <a href="https://sulaimanvesal.github.io/LVQuan.htm">
-                <papertitle>Spatio-temporal Multi-task Learning for Cardiac MRI Left Ventricle Quantification</papertitle>
-              </a>
-              <br>
-              <strong>Sulaiman Vesal</strong>, 
-	      <a href="http://www.mgharbi.com/">Mingxuan Gu</a>, 
-              <a href="https://lme.tf.fau.de/person/maier/">Andreas Maier</a>,
-              <a href="https://eps.leeds.ac.uk/computing/staff/1846/dr-nishant-ravikumar/">Nishant Ravikumar</a>
-              <br>
-              <em>IEEE Journal of Biomedical Health and Informatic (IEEE-JBHI)</em>, 2020&nbsp
-              <br>
-              <a href="https://sulaimanvesal.github.io/LVQuan.htm">project page</a> /
-              <a href="https://arxiv.org/abs/2012.13364">arXiv</a> /
-	      <a href="https://ieeexplore.ieee.org/abstract/document/9302580">IEEE-JBHI</a> /
-	      <a href="https://github.com/sulaimanvesal/CardiacQuanNet">code</a> /
-            </td>
-          </tr>
-		
-			  <tr onmouseout="singan_stop()" onmouseover="singan_start()">
-            <td style="padding-left:20px;padding-top:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='lvseg_image'>
-                  <img src='images/LVSeg_before.png' width="160"></div>
-                <img src='images/LVSeg_after.png' width="160">
-              </div>
-              <script type="text/javascript">
-                function singan_start() {
-                  document.getElementById('lvseg_image').style.opacity = "1";
-                }
+                <div class="relative hidden lg:block hero-visual opacity-0 translate-x-10">
+                    <div class="absolute -top-10 -right-10 w-64 p-6 glass-panel rounded-2xl animate-[float_6s_ease-in-out_infinite] z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <i class="fa-solid fa-brain text-cyan-400 text-xl"></i>
+                            <span class="text-xs font-mono text-slate-500">MODEL STATUS</span>
+                        </div>
+                        <div class="text-2xl font-bold text-white">Converged</div>
+                        <div class="text-xs text-green-400 mt-1">+98.4% Accuracy (Prostate)</div>
+                    </div>
 
-                function singan_stop() {
-                  document.getElementById('lvseg_image').style.opacity = "0";
+                    <div class="absolute top-40 -left-10 w-64 p-6 glass-panel rounded-2xl animate-[float_8s_ease-in-out_infinite] animation-delay-2000 z-20 bg-slate-900/80">
+                        <div class="flex items-center justify-between mb-2">
+                            <i class="fa-solid fa-quote-right text-purple-400 text-xl"></i>
+                            <span class="text-xs font-mono text-slate-500">IMPACT</span>
+                        </div>
+                        <div class="text-3xl font-bold text-white counter" data-target="1200">0</div>
+                        <div class="text-xs text-slate-400 mt-1">Academic Citations</div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl font-mono text-xs text-slate-400 border-l-4 border-cyan-500/50 bg-black/40 transform rotate-1 hover:rotate-0 transition-all duration-500">
+                        <p><span class="text-purple-400">class</span> <span class="text-yellow-300">Researcher</span>(<span class="text-blue-300">AppliedScientist</span>):</p>
+                        <p class="pl-4">def <span class="text-blue-400">__init__</span>(self):</p>
+                        <p class="pl-8">self.focus = [<span class="text-green-300">'LLMs'</span>, <span class="text-green-300">'Medical_AI'</span>]</p>
+                        <p class="pl-8">self.lab = <span class="text-green-300">'MAIDAP'</span></p>
+                        <p class="pl-8">self.status = <span class="text-green-300">'Deploying_Agents'</span></p>
+                        <p class="pl-4 mt-2"><span class="text-slate-600"># Executing vision...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="stack" class="py-20 border-t border-slate-800 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Core <span class="text-cyan-400">Intelligence</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Technical arsenal deployed across research and production environments.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 glass-panel rounded-xl hover:bg-slate-800/50 transition-all group cursor-default">
+                    <i class="fa-solid fa-microchip text-3xl text-blue-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="font-bold text-white">Deep Learning</h3>
+                    <p class="text-xs text-slate-500 mt-2">PyTorch, TensorFlow, Diffusion Models</p>
+                </div>
+                <div class="p-6 glass-panel rounded-xl hover:bg-slate-800/50 transition-all group cursor-default">
+                    <i class="fa-solid fa-heart-pulse text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="font-bold text-white">Medical AI</h3>
+                    <p class="text-xs text-slate-500 mt-2">Segmentation, Registration, Synthetic Data</p>
+                </div>
+                <div class="p-6 glass-panel rounded-xl hover:bg-slate-800/50 transition-all group cursor-default">
+                    <i class="fa-solid fa-robot text-3xl text-purple-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="font-bold text-white">Generative AI</h3>
+                    <p class="text-xs text-slate-500 mt-2">LLMs, SLMs, RAG Architectures</p>
+                </div>
+                <div class="p-6 glass-panel rounded-xl hover:bg-slate-800/50 transition-all group cursor-default">
+                    <i class="fa-solid fa-server text-3xl text-green-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="font-bold text-white">MLOps</h3>
+                    <p class="text-xs text-slate-500 mt-2">Azure AI, Deployment at Scale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-white mb-16 text-center">The <span class="text-cyan-400">Trajectory</span></h2>
+            
+            <div class="relative border-l-2 border-slate-800 ml-6 md:ml-0 space-y-16">
+                
+                <div class="relative md:ml-12 experience-card opacity-0 translate-y-10">
+                    <span class="absolute -left-[55px] top-2 h-8 w-8 rounded-full bg-cyan-500 border-4 border-slate-900 flex items-center justify-center z-10">
+                        <i class="fa-brands fa-microsoft text-white text-xs"></i>
+                    </span>
+                    <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i class="fa-brands fa-microsoft text-9xl"></i>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">Senior Applied Science Manager</h3>
+                                    <p class="text-cyan-500 font-mono text-sm">Microsoft Research (MAIDAP) | Present</p>
+                                </div>
+                                <span class="bg-cyan-900/30 text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/20 mt-2 md:mt-0">Redmond, WA</span>
+                            </div>
+                            <p class="text-slate-400 mb-4">Leading the acceleration of AI development. Managing high-impact projects involving LLMs, SLMs, and enterprise-scale AI integration.</p>
+                            <ul class="space-y-2 text-sm text-slate-500">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-cyan-500 mr-2"></i> Delivering "COSMIC" Failure Analyzers</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-cyan-500 mr-2"></i> Fine-tuning Small Language Models (SLMs)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative md:ml-12 experience-card opacity-0 translate-y-10">
+                    <span class="absolute -left-[55px] top-2 h-8 w-8 rounded-full bg-slate-700 border-4 border-slate-900 flex items-center justify-center z-10">
+                        <i class="fa-solid fa-eye text-white text-xs"></i>
+                    </span>
+                    <div class="glass-panel p-8 rounded-2xl group">
+                        <h3 class="text-xl font-bold text-white">AI Researcher</h3>
+                        <p class="text-slate-500 font-mono text-sm mb-4">Hanwha Vision America</p>
+                        <p class="text-slate-400 text-sm">Developed next-gen computer vision algorithms for security and surveillance, focusing on multi-modal data fusion.</p>
+                    </div>
+                </div>
+
+                <div class="relative md:ml-12 experience-card opacity-0 translate-y-10">
+                    <span class="absolute -left-[55px] top-2 h-8 w-8 rounded-full bg-red-900 border-4 border-slate-900 flex items-center justify-center z-10">
+                        <i class="fa-solid fa-university text-white text-xs"></i>
+                    </span>
+                    <div class="glass-panel p-8 rounded-2xl group border-l-4 border-red-900">
+                        <h3 class="text-xl font-bold text-white">R&D Scientist & Engineer</h3>
+                        <p class="text-red-400 font-mono text-sm mb-4">Stanford University School of Medicine</p>
+                        <p class="text-slate-400 text-sm">Urologic Cancer Innovation Lab (UCIL). Pioneered Deep Learning methods for prostate cancer detection in ultrasound imaging (ProstDecNet).</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-white">Selected <span class="text-purple-500">Publications</span></h2>
+                    <p class="text-slate-500 mt-2">Breakthroughs in Medical Imaging & AI</p>
+                </div>
+                <a href="https://scholar.google.com/citations?user=SQOL8eYAAAAJ&hl=en" class="text-cyan-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
+                    Full List <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="glass-panel p-6 rounded-xl hover:-translate-y-2 transition-all duration-300 border-glow group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-cyan-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">NEURIPS 2023</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">ProsDectNet: Prostate Cancer Detection</h3>
+                    <p class="text-sm text-slate-400 mb-6">A deep learning framework overcoming the limitations of ultrasound for accurate cancer localization.</p>
+                    <a href="#" class="text-xs font-bold text-white uppercase tracking-wider hover:text-cyan-400">Read Paper &rarr;</a>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl hover:-translate-y-2 transition-all duration-300 border-glow group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-cyan-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono bg-green-900/30 text-green-300 px-2 py-1 rounded">IEEE TMI</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Adapt Everywhere</h3>
+                    <p class="text-sm text-slate-400 mb-6">Unsupervised adaptation of point-clouds for cardiac image segmentation using entropy minimization.</p>
+                    <a href="#" class="text-xs font-bold text-white uppercase tracking-wider hover:text-cyan-400">Read Paper &rarr;</a>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl hover:-translate-y-2 transition-all duration-300 border-glow group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono bg-blue-900/30 text-blue-300 px-2 py-1 rounded">MICCAI</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">SkinNet Framework</h3>
+                    <p class="text-sm text-slate-400 mb-6">High-fidelity skin lesion segmentation. One of the most cited papers in the domain.</p>
+                    <a href="#" class="text-xs font-bold text-white uppercase tracking-wider hover:text-cyan-400">Read Paper &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-800 bg-slate-900 text-center">
+        <h2 class="text-2xl font-bold text-white mb-6">Ready to collaborate?</h2>
+        <div class="flex justify-center space-x-8 mb-8">
+            <a href="mailto:sulaiman.vesal@microsoft.com" class="text-slate-400 hover:text-cyan-400 text-2xl transition-transform hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sulaimanvesal/" class="text-slate-400 hover:text-blue-500 text-2xl transition-transform hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/sulaimanvesal" class="text-slate-400 hover:text-white text-2xl transition-transform hover:scale-110"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="text-slate-600 text-sm font-mono">SYSTEM.EXIT(0) // © 2025 SULAIMAN VESAL</p>
+    </footer>
+
+    <script>
+        // --- 1. Loader Animation ---
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            const line = document.querySelector('.loader-line');
+            
+            // Animate the line width
+            gsap.to(line, { width: '100%', duration: 1.5, ease: "power2.inOut", onComplete: () => {
+                gsap.to(loader, { y: '-100%', duration: 0.8, ease: "power4.inOut" });
+                initAnimations();
+            }});
+        });
+
+        // --- 2. Neural Network Canvas Background (Vanilla JS) ---
+        const canvas = document.getElementById('neural-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let width, height;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(0, 243, 255, 0.5)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = window.innerWidth < 768 ? 40 : 80;
+            for (let i = 0; i < count; i++) particles.push(new Particle());
+        }
+        initParticles();
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                
+                // Draw connections
+                for (let j = i; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 150) {
+                        ctx.strokeStyle = `rgba(0, 243, 255, ${0.1 - dist/1500})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
                 }
-                singan_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
-              <a href="https://sulaimanvesal.github.io/LVSeg.htm">
-                <papertitle>Fully Automated 3D Cardiac MRI Localisation and Segmentation Using Deep Neural Networks</papertitle>
-              </a>
-              <br>
-              <strong>Sulaiman Vesal</strong>, 
-              <a href="https://lme.tf.fau.de/person/maier/">Andreas Maier</a>,
-              <a href="https://eps.leeds.ac.uk/computing/staff/1846/dr-nishant-ravikumar/">Nishant Ravikumar</a>
-              <br>
-              <em>MDPI Journal of Imaging</em>, 2020&nbsp
-              <br>
-              <a href="https://sulaimanvesal.github.io/LVSeg.htm">project page</a> /
-              <a href="https://arxiv.org/abs/2004.12314">arXiv</a> /
-			  <a href="">Journal of Imaging</a> /
-			  <a href="">code</a> /
-            </td>
-          </tr>
-		  
-	  <tr>
-            <td style="padding-left:20px;padding-top:20px;width:25%;vertical-align:middle">
-              <div class="one">
-				<img src='images/SupervisedUDA.png' width="100%">
-              </div>
-            </td>
-            <td style="padding-left:20px;padding-top:20px;width:75%;vertical-align:top">
-			  <a href="">
-                <papertitle>Automated Multi-sequence Cardiac MRI Segmentation Using Supervised Domain Adaptation</papertitle>
-              </a>
-              <br>
-		<strong>Sulaiman Vesal</strong>, 
-	        <a href="https://eps.leeds.ac.uk/computing/staff/1846/dr-nishant-ravikumar/">Nishant Ravikumar</a>,
-                <a href="https://lme.tf.fau.de/person/maier/">Andreas Maier</a>
-              <br>
-              <em>MICCAI-STACOM</em>, 2019&nbsp 
-              <br>
-	      <a href="https://arxiv.org/abs/1908.07726">arXiv</a> /
-              <a href="https://link.springer.com/chapter/10.1007/978-3-030-39074-7_32">paper</a> 
-		</td>
-          </tr>
-	
-	<hr>
-		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding-left:20px;padding-bottom:10px;width:100%;vertical-align:middle">
-              <heading>Journal Reviewers</heading>
-			  </td>
-			 </tr>
-			</tbody></table>
-			<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>		
-			 <tr>
-             <td style="padding:20px;width:1000%;vertical-align:top">
-			  <p style="text-align:left;margin-top: -15px;">
-			  IEEE Transactions on Medical Imaging  
- 			  </p>
-			  <p style="text-align:left;margin-top: -15px;">
-			  Medical Image Analysis 
- 			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  IEEE Transcation on Image Processing  
- 			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  Nature Scientific Report  
- 			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  PLoS One  
- 			  </p>
-		     	  <p style="text-align:left;margin-top: -15px;">
-			  International Journal of Computer Assisted Radiology and Surgery  
- 			  </p>
-            </td>
-          </tr>
-        </tbody></table>
-		
-		<hr>
-        </tbody></table>
-		<br>
-		<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <p style="margin:0px;text-align:center;font-size:small;">
-               Wonder about the <a href="https://www.google.com/search?q=orchid+meaning&oq=orchid+meaning&aqs=chrome..69i57j0l9.4784j0j7&sourceid=chrome&ie=UTF-8">meaning of <img src='images/icon2.png' width="3%"> </a>? 
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-		<hr>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="margin-top:-20px;text-align:center;font-size:small;">
-                This website is based on <a href="https://jonbarron.info/">Jon Barron</a>'s template (<a href="https://github.com/jonbarron/jonbarron_website">source code</a>)
-              </p>
-	      <p style"margin-top:-40px;text-align:center;font-size:small;">
-		<!-- hitwebcounter Code START -->
-		<a href="https://www.hitwebcounter.com" target="_blank">
-		<img src="https://hitwebcounter.com/counter/counter.php?page=7763455&style=0024&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>                                                         
-              </p>
-	      </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // --- 3. GSAP Scroll Animations ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        function initAnimations() {
+            // Hero Text Stagger
+            gsap.to('.hero-content', { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+            gsap.to('.hero-visual', { opacity: 1, x: 0, duration: 1, delay: 0.3, ease: "power3.out" });
+
+            // Number Counter
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                gsap.to(counter, {
+                    innerHTML: target,
+                    duration: 2,
+                    scrollTrigger: counter,
+                    snap: { innerHTML: 1 },
+                    ease: "power1.inOut"
+                });
+            });
+
+            // Experience Cards Stagger
+            gsap.utils.toArray('.experience-card').forEach((card, i) => {
+                gsap.to(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: i * 0.2
+                });
+            });
+        }
+    </script>
 </body>
-
 </html>
